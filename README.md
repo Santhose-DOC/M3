@@ -1,3 +1,6 @@
+# NAME : SANTHOSE AROCKIARAJ J
+# REGISTER NO: 212224230248 
+
 # EX-11-EMI-CALCULATOR
 
 ## AIM
@@ -14,11 +17,30 @@ To write a program to prepare EMI calculator using function without return type 
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include<math.h>
+void emi(float p,float r,float n)
+{
+    r=r/(100*12);
+    n=n*12;
+    float emi=p*r*pow(1+r,n)/(pow(1+r,n)-1);
+    printf("Monthly EMI is= %.3f",emi);
+}
+int main()
+{
+    float p,n,r;
+    scanf("%f %f %f",&p,&r,&n);
+    emi(p,r,n);
+}
 
+
+```
 
 ## OUTPUT
 
 
+![447615715-a088e829-8ab3-4f0c-8234-5ff5a3085ab9](https://github.com/user-attachments/assets/d4406465-bfca-4476-b4c7-186b65837c53)
 
 
 
@@ -43,9 +65,31 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+void fibonacci(int n)
+{
+    int temp=-1,a=1,b=0;
+    for (int i=1;i<=n;i++)
+    {
+        temp=a+b;
+        a=b;
+        b=temp;
+        printf("%d ",a);
+       
+    }
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    fibonacci(num);
+}
+```
 
 ## OUTPUT
 
+![447616308-b8b8dd7c-d49e-4845-86d1-0b58ae0d532b](https://github.com/user-attachments/assets/432bd607-697d-414d-8f64-0227c3a6171d)
 
 
 
@@ -71,13 +115,29 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```
 
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    int arr[n];
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    if (n>0) printf("%d\n",arr[n-1]);
+    else printf(" ");   
+}
+```
 ## OUTPUT
 
 
 
 
 
+![447616597-2426aa2f-d79e-44c8-b2a8-b9b9d3257453](https://github.com/user-attachments/assets/abc9b2d2-7dfb-4220-8ad7-0d0482499ec1)
 
 
 
@@ -101,11 +161,29 @@ To write a C Program to count total number of positive elements in an array.
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    int arr[n],count_pos=0,count_neg=0;
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+        if (arr[i]>0) count_pos++;
+        else count_neg++;
+    }
+    printf("count  of positive numbers  in array: %d\n",count_pos);
+    printf("count  of negative numbers  in array: %d",count_neg);
+}
 
+```
 
 ## OUTPUT
 
 
+![447616705-810d3c65-1ce9-46e7-b11e-6cc87e3db047](https://github.com/user-attachments/assets/83af6f65-10a9-44f3-b6c8-a1a472333857)
 
 
 
@@ -137,9 +215,38 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
+```
+#include <stdio.h>
 
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            arr[i] = 'E';  // Replacing even numbers with 'E'
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == 'E') {
+            printf("E ");
+        } else {
+            printf("%d ", arr[i]);
+        }
+    }
+
+    return 0;
+}
+```
 ## Output:
  
+![447616841-ebb4196b-0a0f-4a77-adc2-e3925ca1ac57](https://github.com/user-attachments/assets/94147ab8-8d80-4615-b685-2520534ef903)
 
 
 ## Result:
